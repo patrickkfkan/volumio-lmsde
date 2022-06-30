@@ -1,8 +1,8 @@
 version: "3.5"
 services:
-  logitechmediaserver:
-    image: ${LMS_DOCKER_IMAGE_REPO}:${LMS_DOCKER_IMAGE_TAG}
-    container_name: logitechmediaserver
+  ${DOCKER_CONTAINER_NAME}:
+    image: ${DOCKER_IMAGE_REPO}:${DOCKER_IMAGE_TAG}
+    container_name: ${DOCKER_CONTAINER_NAME}
     network_mode: "host"
     volumes:
       - logitechmediaserver-config:/config
