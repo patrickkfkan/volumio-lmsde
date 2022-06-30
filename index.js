@@ -84,7 +84,7 @@ ControllerLMS.prototype.onStart = function () {
   server.start()
     .then(() => {
       js.toast('success', js.getI18n('LMSDE_STARTED'));
-      this.serverStatus = 'started;'
+      this.serverStatus = 'started';
       defer.resolve();
     })
     .catch((e) => {
