@@ -56,6 +56,9 @@ If the Music Services Shield plugin is enabled while the LMS Docker container is
 
 ## Changelog
 
+0.1.1:
+- Improve compatibility with Music Services Shield plugin
+
 0.1.0:
 - Initial release
 - Logitech Media Server version installed: 8.2.1
