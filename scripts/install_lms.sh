@@ -45,6 +45,10 @@ sed -i 's/${DOCKER_IMAGE_TAG}/'"${DOCKER_IMAGE_TAG}"'/' "${OPT_DIR}/docker-compo
 cp "${OPT_DIR}/docker-compose.yml" "${OPT_DIR}/docker-compose.yml.template"
 sed -i 's|${DOCKER_CGROUP_PARENT}|/|' "${OPT_DIR}/docker-compose.yml"
 
+# Pull Docker image
+echo "Pulling Docker image ${DOCKER_IMAGE_REPO}:${DOCKER_IMAGE_TAG}..."
+docker image pull "${DOCKER_IMAGE_REPO}:${DOCKER_IMAGE_TAG}"
+
 # Build container
 echo "Finalizing installation..."
 cd "${OPT_DIR}"
